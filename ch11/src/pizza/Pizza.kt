@@ -2,7 +2,7 @@ package pizza
 
 sealed class Pizza(name: String) : Item(name) {
 
-    private val toppings: MutableList<Topping> = mutableListOf()
+    val toppings: MutableList<Topping> = mutableListOf()
 
     operator fun Topping.unaryPlus() {
         this@Pizza.toppings.add(this)

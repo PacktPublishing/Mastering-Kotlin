@@ -9,7 +9,7 @@ fun order(init: Order.() -> Unit): Order {
 }
 
 class Order(val id: String)  {
-    private val items: MutableMap<Item, Int> = mutableMapOf()
+    val items: MutableMap<Item, Int> = mutableMapOf()
 
     fun pizza(init: Pizza.() -> Unit) {
         val pizza = BuildYourOwn()
