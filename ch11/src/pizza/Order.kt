@@ -8,7 +8,7 @@ fun order(init: Order.() -> Unit): Order {
     return order
 }
 
-class Order(val id: String)  {
+class Order(val id: String) : Item("")  {
     val items: MutableMap<Item, Int> = mutableMapOf()
 
     fun pizza(init: Pizza.() -> Unit) {
@@ -20,23 +20,21 @@ class Order(val id: String)  {
     fun soda(soda: Soda) = items.put(soda, items.getOrDefault(soda, 0) + 1)
 
     infix fun Soda.quantity(quantity: Int) {
-        items.put(this, items.getOrDefault(this, 0) + quantity)
+        this@Order.items.put(this, this@Order.items.getOrDefault(this, 0) + quantity)
     }
 
-    operator fun Soda.unaryPlus(){
-        items.put(this, items.getOrDefault(this, 0) + 1)
-    }
+    operator fun Soda.unaryPlus() = this@Order.soda(this)
 
     operator fun Pizza.unaryPlus() {
-        items.put(this, items.getOrDefault(this, 0) + 1)
+        this@Order.items.put(this, this@Order.items.getOrDefault(this, 0) + 1)
     }
 
-    fun print() {
+    override fun log(indent: String) {
         println("Order: $id")
         println("Items")
         items.forEach {
             print("${it.value} x ")
-            it.key.print("  ")
+            it.key.log()
         }
     }
 }

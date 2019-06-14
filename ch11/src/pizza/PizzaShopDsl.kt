@@ -22,5 +22,5 @@ fun main() {
         }
     }
 
-    order.print()
+    order.log()
 }

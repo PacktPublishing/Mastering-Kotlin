@@ -4,12 +4,10 @@ sealed class Pizza(name: String) : Item(name) {
 
     val toppings: MutableList<Topping> = mutableListOf()
 
-    operator fun Topping.unaryPlus() {
-        this@Pizza.toppings.add(this)
-    }
+    operator fun Topping.unaryPlus() = this@Pizza.toppings.add(this)
 
-    override fun print(indent: String) {
-        super.print(indent)
+    override fun log(indent: String) {
+        super.log(indent)
         toppings.forEach {
             println("$indent      ${it.name}")
         }
