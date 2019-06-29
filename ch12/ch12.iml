@@ -8,5 +8,11 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
+    <orderEntry type="library" name="io.arrow-kt:arrow-core:0.7.1" level="project" />
+    <orderEntry type="library" name="io.arrow-kt:arrow-data:0.7.1" level="project" />
+    <orderEntry type="library" name="io.arrow-kt:arrow-effects:0.7.1" level="project" />
+    <orderEntry type="library" name="io.arrow-kt:arrow-typeclasses:0.7.1" level="project" />
+    <orderEntry type="library" name="io.arrow-kt:arrow-instances-data:0.7.1" level="project" />
+    <orderEntry type="library" name="io.arrow-kt:arrow-generic:0.7.1" level="project" />
   </component>
 </module>
