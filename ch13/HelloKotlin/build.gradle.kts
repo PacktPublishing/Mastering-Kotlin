@@ -1,7 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    extensions.add("kotlin_version", "1.3.31")
+    extensions.add("kotlin_version", Deps.Kotlin.version)
     repositories {
         google()
         jcenter()
