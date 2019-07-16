@@ -8,9 +8,12 @@ dependencies {
 
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.31")
 
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
     implementation("androidx.appcompat:appcompat:1.0.2")
-    implementation("androidx.core:core-ktx:1.0.2")
     implementation("androidx.constraintlayout:constraintlayout:1.1.3")
+
+    implementation(Deps.Android.Ktx.core)
+    implementation(Deps.Android.Ktx.fragment)
 }
 
 
@@ -30,4 +33,8 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
+}
+
+androidExtensions {
+    isExperimental = true
 }
