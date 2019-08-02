@@ -4,12 +4,15 @@ if (typeof kotlin === 'undefined') {
 var ch14 = function (_, Kotlin) {
   'use strict';
   var println = Kotlin.kotlin.io.println_s8jyv4$;
-  function main(args) {
-    var message = 'Hello Kotlin JavaScript';
-    println(message);
+  function main() {
+    var outputMessage = 'Hello Kotlin JavaScript';
+    println(outputMessage);
+    jQuery('body').append('<h1>We Added A Heading!!<\/h1>');
+    var someObject = null;
+    someObject.invokeAnything();
   }
-  _.main_kand9s$ = main;
-  main([]);
+  _.main = main;
+  main();
   Kotlin.defineModule('ch14', _);
   return _;
 }(typeof ch14 === 'undefined' ? {} : ch14, kotlin);
