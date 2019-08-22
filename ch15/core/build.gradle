@@ -3,7 +3,17 @@
         id 'org.jetbrains.kotlin.native.cocoapods'
     }
 
+    // CocoaPods requires the podspec to have a version.
+    version = "1.0"
+    
     kotlin {
+
+        cocoapods {
+            // Configure fields required by CocoaPods.
+            summary = "https:packt.com"
+            homepage = "Example of Kotlin Multi-platform project"
+        }
+        
         //js()
 
         jvm("android")
@@ -12,15 +22,12 @@
         final def iOSTarget = System.getenv('SDK_NAME')?.startsWith('iphoneos')
                 ? presets.iosArm64 : presets.iosX64
         iosX64("ios") {
-            binaries.framework('core')  {
-                freeCompilerArgs.add("-Xobjc-generics")
+//            binaries.framework('core')  {
+//                freeCompilerArgs.add("-Xobjc-generics")
+//            }
+            binaries {
+                framework("core")
             }
-        }
-        
-        cocoapods {
-            // Configure fields required by CocoaPods.
-            summary = "https:packt.com"
-            homepage = "Example of Kotlin Multi-platform project"
         }
 
         sourceSets {
