@@ -1,16 +1,26 @@
-    plugins { id 'kotlin-multiplatform' }
+    plugins {
+        id "org.jetbrains.kotlin.multiplatform"
+        id 'org.jetbrains.kotlin.native.cocoapods'
+    }
 
     kotlin {
         //js()
 
         jvm("android")
-
-        // This is for iPhone emulator
-        // Switch here to iosArm64 (or iosArm32) to build library for iPhone device
+        
+        // Change to iosArm64 (or iosArm32) to build library for iPhone device
+        final def iOSTarget = System.getenv('SDK_NAME')?.startsWith('iphoneos')
+                ? presets.iosArm64 : presets.iosX64
         iosX64("ios") {
-            binaries {
-                framework()
+            binaries.framework('core')  {
+                freeCompilerArgs.add("-Xobjc-generics")
             }
+        }
+        
+        cocoapods {
+            // Configure fields required by CocoaPods.
+            summary = "https:packt.com"
+            homepage = "Example of Kotlin Multi-platform project"
         }
 
         sourceSets {
