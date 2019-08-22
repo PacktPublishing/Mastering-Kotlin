@@ -1,0 +1,35 @@
+    plugins { id 'kotlin-multiplatform' }
+
+    kotlin {
+        //js()
+
+        jvm("android")
+
+        // This is for iPhone emulator
+        // Switch here to iosArm64 (or iosArm32) to build library for iPhone device
+        iosX64("ios") {
+            binaries {
+                framework()
+            }
+        }
+
+        sourceSets {
+            commonMain {
+                dependencies {
+                    implementation kotlin('stdlib-common')
+                }
+            }
+            androidMain {
+                dependencies {
+                    implementation kotlin('stdlib')
+                }
+            }
+            iosMain { }
+
+    //        jsMain {
+    //            dependencies {
+    //                implementation kotlin('stdlib-js')
+    //            }
+    //        }
+        }
+    }

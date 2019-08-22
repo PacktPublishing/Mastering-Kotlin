@@ -1,0 +1,14 @@
+.gradle
+.idea/*
+local.properties
+*iml
+*.iml
+*/build
+build/
+.DS_Store
+keystore.properties
+
+out/
+classes/
+
+iosApp/iosApp/iosApp.xcodeproj/xcuserdata
