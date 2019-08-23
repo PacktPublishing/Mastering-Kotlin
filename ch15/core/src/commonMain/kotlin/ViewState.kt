@@ -1,0 +1,1 @@
+data class ViewState(val title: String, val subtitle: String)
