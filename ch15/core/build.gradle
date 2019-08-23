@@ -14,17 +14,12 @@
             homepage = "Example of Kotlin Multi-platform project"
         }
         
-        //js()
+        js()
 
         jvm("android")
         
         // Change to iosArm64 (or iosArm32) to build library for iPhone device
-        final def iOSTarget = System.getenv('SDK_NAME')?.startsWith('iphoneos')
-                ? presets.iosArm64 : presets.iosX64
         iosX64("ios") {
-//            binaries.framework('core')  {
-//                freeCompilerArgs.add("-Xobjc-generics")
-//            }
             binaries {
                 framework("core")
             }
@@ -43,10 +38,10 @@
             }
             iosMain { }
 
-    //        jsMain {
-    //            dependencies {
-    //                implementation kotlin('stdlib-js')
-    //            }
-    //        }
+            jsMain {
+                dependencies {
+                    implementation kotlin('stdlib-js')
+                }
+            }
         }
     }
