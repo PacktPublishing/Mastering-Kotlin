@@ -6,3 +6,4 @@ local.properties
 */build
 build/
 .DS_Store
+out/*
