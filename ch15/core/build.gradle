@@ -45,3 +45,7 @@
             }
         }
     }
+
+    configurations { // Seems to be a hack for a gradle bug.
+        compileClasspath
+    }
