@@ -14,10 +14,10 @@ fun main() {
         Sprite quantity 2
 
         +HawaiianPizza {
-            +Peperoni
+            +Pepperoni
         }
         pizza {
-            +Peperoni
+            +Pepperoni
             +Olive
         }
     }
