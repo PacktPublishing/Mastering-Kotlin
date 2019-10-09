@@ -7,6 +7,8 @@ local.properties
 
 */build/*
 
+*.iml
+
 /.idea/*
 
 # IDEA Ignore exceptions
