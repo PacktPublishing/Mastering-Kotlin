@@ -1,6 +1,6 @@
 package pizza
 
 sealed class Topping(name: String): Item(name)
-object Peperoni : Topping("Peperoni")
+object Pepperoni : Topping("Pepperoni")
 object Olive : Topping("Olive")
 object Pineapple : Topping("Pineapple")

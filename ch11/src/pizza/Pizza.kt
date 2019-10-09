@@ -19,9 +19,9 @@ class BuildYourOwn(init: Pizza.() -> Unit = {}) : Pizza("Build Your Own Pizza") 
         init.invoke(this)
     }
 }
-class PeperoniPizza(init: Pizza.() -> Unit = {}) : Pizza("Peperoni Pizza") {
+class PepperoniPizza(init: Pizza.() -> Unit = {}) : Pizza("Pepperoni Pizza") {
     init {
-        +Peperoni
+        +Pepperoni
         init.invoke(this)
     }
 }
