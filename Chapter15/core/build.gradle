@@ -1,0 +1,51 @@
+    plugins {
+        id "org.jetbrains.kotlin.multiplatform"
+        id 'org.jetbrains.kotlin.native.cocoapods'
+    }
+
+    // CocoaPods requires the podspec to have a version.
+    version = "1.0"
+    
+    kotlin {
+
+        cocoapods {
+            // Configure fields required by CocoaPods.
+            summary = "https:packt.com"
+            homepage = "Example of Kotlin Multi-platform project"
+        }
+        
+        js()
+
+        jvm("android")
+        
+        // Change to iosArm64 (or iosArm32) to build library for iPhone device
+        iosX64("ios") {
+            binaries {
+                framework("core")
+            }
+        }
+
+        sourceSets {
+            commonMain {
+                dependencies {
+                    implementation kotlin('stdlib-common')
+                }
+            }
+            androidMain {
+                dependencies {
+                    implementation kotlin('stdlib')
+                }
+            }
+            iosMain { }
+
+            jsMain {
+                dependencies {
+                    implementation kotlin('stdlib-js')
+                }
+            }
+        }
+    }
+
+    configurations { // Seems to be a hack for a gradle bug.
+        compileClasspath
+    }

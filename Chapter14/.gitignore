@@ -1,0 +1,16 @@
+*/.DS_Store
+.DS_Store
+
+lib/
+
+/.idea/*
+
+# IDEA Ignore exceptions
+!/.idea/fileTemplates/
+!/.idea/inspectionProfiles/
+!/.idea/scopes/
+!/.idea/codeStyles/
+!/.idea/encodings.xml
+!/.idea/copyright/
+!/.idea/compiler.xml
+!/.idea/kotlinc.xml
