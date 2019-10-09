@@ -1,6 +1,8 @@
 */.DS_Store
 .DS_Store
 
+.gradle/*
+
 /.idea/*
 
 # IDEA Ignore exceptions
