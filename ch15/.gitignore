@@ -1,12 +1,24 @@
-.gradle
-.idea/*
-local.properties
-*iml
-*.iml
-*/build
-build/
+*/.DS_Store
 .DS_Store
-keystore.properties
 
-out/
-classes/
+.gradle/*
+
+local.properties
+
+*/build/*
+
+*.iml
+
+/.idea/*
+
+# IDEA Ignore exceptions
+!/.idea/fileTemplates/
+!/.idea/inspectionProfiles/
+!/.idea/scopes/
+!/.idea/codeStyles/
+!/.idea/encodings.xml
+!/.idea/copyright/
+!/.idea/compiler.xml
+!/.idea/kotlinc.xml
+!/.idea/misc.xml
+!/.idea/modules.xml

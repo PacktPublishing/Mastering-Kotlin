@@ -1,7 +1,19 @@
-/.gradle
-/.idea
-/out
-/build
-*.iml
-*.ipr
-*.iws
+*/.DS_Store
+.DS_Store
+
+.gradle/*
+
+/.idea/*
+
+# IDEA Ignore exceptions
+!/.idea/fileTemplates/
+!/.idea/inspectionProfiles/
+!/.idea/scopes/
+!/.idea/codeStyles/
+!/.idea/encodings.xml
+!/.idea/copyright/
+!/.idea/compiler.xml
+!/.idea/kotlinc.xml
+!/.idea/misc.xml
+!/.idea/modules.xml
+!/.idea/libraries/

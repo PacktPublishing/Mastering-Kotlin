@@ -1,8 +1,6 @@
 */.DS_Store
 .DS_Store
 
-lib/
-
 /.idea/*
 
 # IDEA Ignore exceptions
@@ -14,3 +12,6 @@ lib/
 !/.idea/copyright/
 !/.idea/compiler.xml
 !/.idea/kotlinc.xml
+!/.idea/misc.xml
+!/.idea/modules.xml
+!/.idea/libraries/
