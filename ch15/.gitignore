@@ -3,6 +3,8 @@
 
 .gradle/*
 
+local.properties
+
 /.idea/*
 
 # IDEA Ignore exceptions
